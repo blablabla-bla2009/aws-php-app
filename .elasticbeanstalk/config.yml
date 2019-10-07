@@ -1,6 +1,9 @@
 branch-defaults:
   default:
     environment: null
+  master:
+    environment: EB-PHP-APP-dev
+    group_suffix: null
 environment-defaults:
   EB-PHP-env:
     branch: null
@@ -9,7 +12,7 @@ global:
   application_name: EB-PHP-APP
   default_ec2_keyname: id_rsa
   default_platform: PHP 7.2
-  default_region: eu-west-2
+  default_region: us-west-2
   include_git_submodules: true
   instance_profile: null
   platform_name: null
