@@ -25,7 +25,7 @@ else
     <section class="congratulations">
         <h1>==111111==Congratulations!</h1>
         <p>1111 Your AWS Elastic Beanstalk <em>PHP</em> application is now running on your own dedicated environment in the AWS&nbsp;Cloud</p>
-        <p>2222 You are running PHP version <?= phpversion() ?></p>
+        <p>2233 You are running PHP version <?= phpversion() ?></p>
     </section>
 
     <section class="instructions">
