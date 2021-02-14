@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pool:
-  vmImage: centos-default
+#pool:
+#  vmImage: centos-default
 
 steps:
 - script: echo Hello, world!
