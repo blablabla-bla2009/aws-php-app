@@ -8,14 +8,20 @@ trigger:
 
 #pool:
 #  vmImage: centos-default
+pool:
+  vmImage: 'ubuntu-16.04'
 
 variables:
   phpVersion: 7.2
 
 steps:
-
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
 
 - script: |
     sudo update-alternatives --set php /usr/bin/php$(phpVersion)
@@ -25,9 +31,7 @@ steps:
     sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
     php -version
   displayName: 'Use PHP version $(phpVersion)'
+- script: composer install --no-interaction --prefer-dist
+  displayName: 'composer install'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 
